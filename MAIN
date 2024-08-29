@@ -1,44 +1,39 @@
 if game.PlaceId == 14787369036 then
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
+for _, gui in ipairs(game:GetService("CoreGui"):GetChildren()) do
+    if gui.Name == "ScreenGui" then
+      gui:Destroy()
+    end
+end
 
-local Window = OrionLib:MakeWindow({Name = "GOA Hub", IntroEnabled = true, IntroText = "Welcome To GOA HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nevcit/Pressure/main/Fluent"))()
 
-local Tab = Window:MakeTab({
-	Name = "Update Log",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+local Window = Fluent:CreateWindow({
+    Title = "GOA Hub",
+    SubTitle = "by Nevcit",
+    TabWidth = 80,
+    Size = UDim2.fromOffset(400, 350),
+    Acrylic = false,
+    Theme = "Darker",
+    MinimizeKey = Enum.KeyCode.LeftControl
 })
 
-Tab:AddLabel("- ADD CHAPTER 1")
+local Tabs = {
+    Update = Window:AddTab({ Title = "Main", Icon = "home" })
+}
 
-Tab:AddLabel("- ADD CHAPTER 2")
-
-Tab:AddLabel("- ADD CHAPTER 3")
-
-Tab:AddLabel("- ADD AUTO FIND CLUE (BETA) (CHAPTER 2)")
-
-Tab:AddLabel("- IMPROVE AUTO KILL XENO (CHAPTER 3)")
-
-local credit = Window:MakeTab({
-	Name = "Credit",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+local Section = Tabs.Update:AddSection("Update")
+Section:AddParagraph({
+    Title = "Change UI"
 })
-
-credit:AddButton({
-	Name = "Youtube Link",
-	Callback = function()
-	  setclipboard("https://www.youtube.com/@Nevcit")
-	  OrionLib:MakeNotification({
-	  Name = "NOTIFICATIONS",
-  	Content = "SUBSCRIBE",
-	  Image = "rbxassetid://4483345998",
-	  Time = 5
-   })
-	end
+Section:AddParagraph({
+    Title = "Added Chapter 1"
 })
-
-OrionLib:Init()
+Section:AddParagraph({
+    Title = "Added Chapter 2"
+})
+Section:AddParagraph({
+    Title = "Added Chapter 3"
+})
 elseif game.PlaceId == 14787381917 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/Nevcit/Weird-Strict-Dad/main/Ch1"))()
 elseif game.PlaceId == 15322497988 then
