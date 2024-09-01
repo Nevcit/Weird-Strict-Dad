@@ -34,6 +34,9 @@ Section:AddParagraph({
 Section:AddParagraph({
     Title = "Added Chapter 3"
 })
+Section:AddParagraph({
+    Title = "Added Chapter 4"
+})
 elseif game.PlaceId == 14787381917 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/Nevcit/Weird-Strict-Dad/main/Ch1"))()
 elseif game.PlaceId == 15322497988 then
@@ -44,4 +47,6 @@ elseif game.PlaceId == 16485242214 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/Nevcit/Weird-Strict-Dad/main/boat"))()
 elseif game.PlaceId == 16554037885 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/Nevcit/Weird-Strict-Dad/main/island"))()
+elseif game.PlaceId == 17619037026 or game.PlaceId == 17680488855 then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Nevcit/Weird-Strict-Dad/main/Ch4"))()
 end
